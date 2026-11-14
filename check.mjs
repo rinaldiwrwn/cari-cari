@@ -7,6 +7,7 @@
 //      CHECKS (checks per run, default 1), INTERVAL_SEC (gap between checks, default 180)
 
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 
 const MERCARI_API = "https://api.mercari.jp/v2/entities:search";
 const STATE_FILE = "seen.json";
@@ -19,10 +20,13 @@ const list = (v) => (Array.isArray(v) ? v : v ? [v] : []).map(String).filter((s)
 const ints = (v) => (v ? v.split(",").map(Number).filter((n) => Number.isInteger(n) && n > 0) : []);
 
 // ---------- config ----------
+let CONFIG_HASH = "";
 function loadConfig() {
   let cfg;
   try {
-    cfg = JSON.parse(readFileSync("config.json", "utf8").replace(/^﻿/, ""));
+    const raw = readFileSync("config.json", "utf8").replace(/^﻿/, "");
+    CONFIG_HASH = createHash("sha1").update(raw).digest("hex").slice(0, 12);
+    cfg = JSON.parse(raw);
   } catch (e) {
     throw new Error(`config.json tidak valid: ${e.message}`);
   }
@@ -51,7 +55,8 @@ function loadConfig() {
   if (!searches.length) throw new Error('config.json belum berisi pencarian di "searches"');
   const cat = cfg.categoryFilter || {};
   const allow = new Set(list(cat.allow)), block = new Set(list(cat.block)), titleOk = list(cat.titleFallback).map(norm);
-  for (const s of searches) Object.assign(s, { catAllow: allow, catBlock: block, catTitle: titleOk });
+  const blockExcept = list(cat.blockUnlessTitle).map(norm);
+  for (const s of searches) Object.assign(s, { catAllow: allow, catBlock: block, catTitle: titleOk, catBlockExcept: blockExcept });
   return searches;
 }
 
@@ -59,7 +64,9 @@ function isTarget(search, item) {
   const n = norm(item.name);
   if (item.auction) return false; // only fixed-price (Buy now) listings
   if (search.exclude.some((x) => n.includes(x))) return false;
-  if (search.catAllow.size && !search.catAllow.has(item.categoryId)) {
+  if (search.catBlock.has(item.categoryId) && search.catBlockExcept.some((t) => n.includes(t))) {
+    // e.g. a buckle listed under the leather-strap category: keep it
+  } else if (search.catAllow.size && !search.catAllow.has(item.categoryId)) {
     // unknown category: accept only if not a blocked category and the title clearly says it is a watch
     if (search.catBlock.has(item.categoryId) || !search.catTitle.some((t) => n.includes(t))) return false;
   }
@@ -125,7 +132,8 @@ async function searchMercari(s) {
 
 async function getTargets(searches) {
   const byId = new Map();
-  for (const s of searches) {
+  for (const [i, s] of searches.entries()) {
+    if (i > 0) await sleep(400); // be gentle with Mercari when there are many searches
     for (const it of await searchMercari(s)) if (!byId.has(it.id) && isTarget(s, it)) byId.set(it.id, it);
   }
   return [...byId.values()];
@@ -147,7 +155,7 @@ const ghHeaders = () => ({ Authorization: `Bearer ${GH_TOKEN}`, Accept: "applica
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const parseState = (text) => {
   const s = JSON.parse(text.replace(/^﻿/, ""));
-  return { ids: s.ids || null, fails: s.fails || 0 };
+  return { ids: s.ids || null, fails: s.fails || 0, cfg: s.cfg || "" };
 };
 
 async function loadState() {
@@ -163,7 +171,7 @@ async function updateState(mutate) {
   for (let attempt = 0; attempt < 5; attempt++) {
     const { state, sha } = await loadState();
     mutate(state);
-    if (state.ids) state.ids = state.ids.slice(-5000);
+    if (state.ids) state.ids = state.ids.slice(-20000);
     const text = JSON.stringify(state) + "\n";
     if (!GH_TOKEN) { writeFileSync(STATE_FILE, text); return state; }
     const r = await fetch(GH_URL, {
@@ -194,8 +202,18 @@ async function checkOnce(searches) {
     return;
   }
 
+  if (state.ids && state.cfg !== CONFIG_HASH) {
+    // config.json changed (e.g. new brands): record what is already listed instead of flooding notifications
+    const added = items.filter((i) => !state.ids.includes(i.id)).length;
+    await updateState((st) => { st.ids = addIds(st.ids, items.map((i) => i.id)); st.fails = 0; st.cfg = CONFIG_HASH; });
+    const names = [...new Set(searches.map((s) => s.name))];
+    console.log(`Config berubah: ${added} listing lama dicatat tanpa notifikasi.`);
+    await notify({ title: "Mercari tracker diperbarui", message: `Sekarang memantau ${names.length} pencarian: ${names.join(", ")}. ${added} listing yang sudah ada dicatat; listing baru berikutnya dikirim ke sini.`, tags: ["gear"], priority: 3 });
+    return;
+  }
+
   if (!state.ids) {
-    await updateState((st) => { st.ids = addIds(st.ids, items.map((i) => i.id)); st.fails = 0; });
+    await updateState((st) => { st.ids = addIds(st.ids, items.map((i) => i.id)); st.fails = 0; st.cfg = CONFIG_HASH; });
     const names = [...new Set(searches.map((s) => s.name))].join(", ");
     console.log(`Run pertama: ${items.length} listing dicatat (${names}).`);
     await notify({ title: "Mercari tracker aktif", message: `Memantau: ${names}. ${items.length} listing yang sudah ada dicatat; listing baru berikutnya dikirim ke sini.`, url: searches[0].page });
