@@ -2,7 +2,7 @@
   "searches": [
     {
       "name": "Favre-Leuba",
-      "url": "https://jp.mercari.com/search?keyword=favre%20leuba&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=favre+leuba&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "favreleuba",
         "ファーブルルーバ"
@@ -40,12 +40,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Favre-Leuba",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%95%E3%82%A1%E3%83%BC%E3%83%96%E3%83%AB%E3%83%AB%E3%83%BC%E3%83%90&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%95%E3%82%A1%E3%83%BC%E3%83%96%E3%83%AB%E3%83%AB%E3%83%BC%E3%83%90&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "favreleuba",
         "ファーブルルーバ"
@@ -83,12 +86,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Omega De Ville",
-      "url": "https://jp.mercari.com/search?keyword=omega%20de%20ville&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=omega+de+ville&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "deville",
         "デビル",
@@ -128,12 +134,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Omega De Ville",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%AA%E3%83%A1%E3%82%AC%20%E3%83%87%E3%83%93%E3%83%AB&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%AA%E3%83%A1%E3%82%AC+%E3%83%87%E3%83%93%E3%83%AB&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "deville",
         "デビル",
@@ -173,12 +182,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Omega",
-      "url": "https://jp.mercari.com/search?keyword=omega&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=omega&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "omega",
         "オメガ"
@@ -216,12 +228,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Omega",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%AA%E3%83%A1%E3%82%AC&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%AA%E3%83%A1%E3%82%AC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "omega",
         "オメガ"
@@ -259,12 +274,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Longines",
-      "url": "https://jp.mercari.com/search?keyword=longines&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=longines&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "longines",
         "ロンジン"
@@ -302,12 +320,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Longines",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%AD%E3%83%B3%E3%82%B8%E3%83%B3&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%AD%E3%83%B3%E3%82%B8%E3%83%B3&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "longines",
         "ロンジン"
@@ -345,12 +366,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Certina",
-      "url": "https://jp.mercari.com/search?keyword=certina&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=certina&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "certina",
         "サーチナ"
@@ -388,12 +412,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Certina",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%B5%E3%83%BC%E3%83%81%E3%83%8A&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%B5%E3%83%BC%E3%83%81%E3%83%8A&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "certina",
         "サーチナ"
@@ -431,12 +458,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Yema",
-      "url": "https://jp.mercari.com/search?keyword=yema&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=yema&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "yema",
         "イエマ"
@@ -474,12 +504,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Yema",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%A4%E3%82%A8%E3%83%9E%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%A4%E3%82%A8%E3%83%9E+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "yema",
         "イエマ"
@@ -517,12 +550,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Eska",
-      "url": "https://jp.mercari.com/search?keyword=eska&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=eska&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "eska",
         "エスカ"
@@ -560,12 +596,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Eska",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%82%B9%E3%82%AB%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%82%B9%E3%82%AB+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "eska",
         "エスカ"
@@ -603,12 +642,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Milus",
-      "url": "https://jp.mercari.com/search?keyword=milus&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=milus&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "milus",
         "ミルス"
@@ -646,12 +688,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Milus",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%9F%E3%83%AB%E3%82%B9%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%9F%E3%83%AB%E3%82%B9+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "milus",
         "ミルス"
@@ -689,12 +734,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Wittnauer",
-      "url": "https://jp.mercari.com/search?keyword=wittnauer&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=wittnauer&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "wittnauer",
         "ウィットナー",
@@ -733,12 +781,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Wittnauer",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%82%A3%E3%83%83%E3%83%88%E3%83%8A%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%82%A3%E3%83%83%E3%83%88%E3%83%8A%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "wittnauer",
         "ウィットナー",
@@ -777,12 +828,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Roy King",
-      "url": "https://jp.mercari.com/search?keyword=roy%20king&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=roy+king&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "royking",
         "ロイキング"
@@ -820,12 +874,15 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     },
     {
       "name": "Roy King",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%AD%E3%82%A4%E3%82%AD%E3%83%B3%E3%82%B0&item_condition_id=2%2C3%2C4%2C5%2C6",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%AD%E3%82%A4%E3%82%AD%E3%83%B3%E3%82%B0&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
       "mustMatch": [
         "royking",
         "ロイキング"
@@ -863,8 +920,41 @@
         "ノベルティ",
         "置時計",
         "掛時計",
-        "懐中時計"
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
       ]
     }
-  ]
+  ],
+  "categoryFilter": {
+    "_info": "Hanya jam tangan. allow = kategori jam tangan Mercari; block = tali/gesper jam & jam saku; titleFallback = kategori lain tetap diterima jika judul jelas jam tangan",
+    "allow": [
+      "414",
+      "415",
+      "419",
+      "265",
+      "266",
+      "270",
+      "1482",
+      "1483",
+      "1484",
+      "1731",
+      "1732",
+      "1733"
+    ],
+    "block": [
+      "416",
+      "417",
+      "418",
+      "267",
+      "268",
+      "269",
+      "1734"
+    ],
+    "titleFallback": [
+      "腕時計",
+      "wristwatch"
+    ]
+  }
 }

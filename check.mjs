@@ -49,12 +49,20 @@ function loadConfig() {
     };
   });
   if (!searches.length) throw new Error('config.json belum berisi pencarian di "searches"');
+  const cat = cfg.categoryFilter || {};
+  const allow = new Set(list(cat.allow)), block = new Set(list(cat.block)), titleOk = list(cat.titleFallback).map(norm);
+  for (const s of searches) Object.assign(s, { catAllow: allow, catBlock: block, catTitle: titleOk });
   return searches;
 }
 
 function isTarget(search, item) {
   const n = norm(item.name);
+  if (item.auction) return false; // only fixed-price (Buy now) listings
   if (search.exclude.some((x) => n.includes(x))) return false;
+  if (search.catAllow.size && !search.catAllow.has(item.categoryId)) {
+    // unknown category: accept only if not a blocked category and the title clearly says it is a watch
+    if (search.catBlock.has(item.categoryId) || !search.catTitle.some((t) => n.includes(t))) return false;
+  }
   return search.mustMatch.length === 0 || search.mustMatch.some((m) => n.includes(m));
 }
 
@@ -106,6 +114,8 @@ async function searchMercari(s) {
       id: it.id,
       name: it.name,
       price: Number(it.price),
+      categoryId: String(it.categoryId || ""),
+      auction: !!it.auction,
       url: shop ? `https://jp.mercari.com/shops/product/${it.id}` : `https://jp.mercari.com/item/${it.id}`,
       thumb: it.thumbnails && it.thumbnails[0],
       search: s.name,
