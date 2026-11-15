@@ -14,6 +14,8 @@ const STATE_FILE = "seen.json";
 const NTFY_TOPIC = (process.env.NTFY_TOPIC || "").trim();
 const CHECKS = Number(process.env.CHECKS || 1);
 const INTERVAL_SEC = Number(process.env.INTERVAL_SEC || 180);
+const RUN_MINUTES = Number(process.env.RUN_MINUTES || 0); // >0: keep checking for this long (one long Actions run)
+const MAX_NOTIFY = 12; // individual notifications per check; the rest are summarised in one
 
 const norm = (s) => (s || "").normalize("NFKC").toLowerCase().replace(/[\s\-_.・]/g, "");
 const list = (v) => (Array.isArray(v) ? v : v ? [v] : []).map(String).filter((s) => s.trim());
@@ -48,6 +50,7 @@ function loadConfig() {
       brandId: ints(p.get("brand_id")),
       itemConditionId: ints(p.get("item_condition_id")),
       mustMatch: list(s.mustMatch).map(norm),
+      labels: (s.labels || []).map((l) => ({ name: String(l.name), match: list(l.match).map(norm) })),
       exclude: list(s.exclude).map(norm),
       page: `https://jp.mercari.com/search?${p.toString()}`,
     };
@@ -101,6 +104,7 @@ async function searchMercari(s) {
     },
     defaultDatasets: ["DATASET_TYPE_MERCARI", "DATASET_TYPE_BEYOND"], serviceFrom: "suruga",
     withItemBrand: true, withItemSize: false, withItemPromotions: true, withItemSizes: true, withShopname: false,
+    withAuction: true, // without this the "auction" field is always null
   };
   const res = await fetch(MERCARI_API, {
     method: "POST",
@@ -125,7 +129,7 @@ async function searchMercari(s) {
       auction: !!it.auction,
       url: shop ? `https://jp.mercari.com/shops/product/${it.id}` : `https://jp.mercari.com/item/${it.id}`,
       thumb: it.thumbnails && it.thumbnails[0],
-      search: s.name,
+      search: (s.labels.find((l) => l.match.some((m) => norm(it.name).includes(m))) || s).name,
     };
   });
 }
@@ -140,7 +144,10 @@ async function getTargets(searches) {
 }
 
 // ---------- ntfy ----------
-async function notify({ title, message, url, image, tags = ["shopping_cart"], priority = 4 }) {
+async function notify(msg) {
+  try { await sendNtfy(msg); } catch (e) { console.log(`ntfy gagal: ${e.message}`); }
+}
+async function sendNtfy({ title, message, url, image, tags = ["shopping_cart"], priority = 4 }) {
   const payload = { topic: NTFY_TOPIC, title, message, priority, tags };
   if (url) { payload.click = url; payload.actions = [{ action: "view", label: "Buka listing", url }]; }
   if (image) payload.attach = image;
@@ -222,11 +229,20 @@ async function checkOnce(searches) {
 
   const seen = new Set(state.ids);
   const fresh = items.filter((i) => !seen.has(i.id));
-  for (const n of fresh) {
-    console.log(`BARU [${n.search}]: ${n.price} yen | ${n.name} | ${n.url}`);
-    await notify({ title: `${n.search}: ${yen(n.price)} yen`, message: n.name, url: n.url, image: n.thumb });
-  }
+  // save first, so a failed notification never causes the same listing to be sent again and again
   if (fresh.length || state.fails) await updateState((st) => { st.ids = addIds(st.ids, fresh.map((n) => n.id)); st.fails = 0; });
+  for (const [i, n] of fresh.entries()) {
+    console.log(`BARU [${n.search}]: ${n.price} yen | ${n.name} | ${n.url}`);
+    if (i < MAX_NOTIFY) {
+      if (i > 0) await sleep(1500); // ntfy.sh rejects bursts (HTTP 429)
+      await notify({ title: `${n.search}: ${yen(n.price)} yen`, message: n.name, url: n.url, image: n.thumb });
+    }
+  }
+  if (fresh.length > MAX_NOTIFY) {
+    const rest = fresh.slice(MAX_NOTIFY);
+    await sleep(1500);
+    await notify({ title: `+${rest.length} listing baru lainnya`, message: rest.slice(0, 15).map((n) => `${n.search} ${yen(n.price)} yen: ${n.name.slice(0, 40)}`).join("\n"), tags: ["package"], priority: 3 });
+  }
   console.log(`OK: ${items.length} listing dicek, ${fresh.length} baru.`);
 }
 
@@ -243,7 +259,9 @@ try {
   process.exit(1);
 }
 for (const s of searches) console.log(`Pencarian: ${s.name} | ${s.page}`);
-for (let i = 0; i < CHECKS; i++) {
+const started = Date.now();
+for (let i = 0; RUN_MINUTES > 0 ? true : i < CHECKS; i++) {
   if (i > 0) await sleep(INTERVAL_SEC * 1000);
+  if (RUN_MINUTES > 0 && Date.now() - started > RUN_MINUTES * 60000) break;
   try { await checkOnce(searches); } catch (e) { console.log(`ERROR: ${e.message}`); }
 }

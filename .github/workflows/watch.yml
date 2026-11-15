@@ -1,12 +1,15 @@
 name: Mercari tracker
 
+# One run keeps checking Mercari for ~5.5 hours, then starts the next run itself,
+# so the tracker runs continuously instead of waiting for GitHub's (often hours-late) schedule.
 on:
   schedule:
-    - cron: "*/10 * * * *"   # every 10 minutes (GitHub may start it late)
-  workflow_dispatch:          # "Run workflow" button for manual tests
+    - cron: "17 * * * *"      # hourly backup: restarts the chain if it ever stops
+  workflow_dispatch:          # "Run workflow" button / used by the chain
 
 permissions:
   contents: write             # needed to save seen.json
+  actions: write              # needed to start the next run
 
 concurrency:
   group: tracker
@@ -15,7 +18,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
 
@@ -23,10 +26,16 @@ jobs:
         with:
           node-version: 22
 
-      - name: Check Mercari (3 checks, 3 minutes apart)
+      - name: Check Mercari (every ~3 minutes for 5.5 hours)
         run: node check.mjs
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CHECKS: 3
-          INTERVAL_SEC: 180
+          RUN_MINUTES: 330
+          INTERVAL_SEC: 150
+
+      - name: Start next run
+        if: ${{ !cancelled() }}
+        run: gh workflow run watch.yml --ref main --repo "$GITHUB_REPOSITORY"
+        env:
+          GH_TOKEN: ${{ github.token }}
