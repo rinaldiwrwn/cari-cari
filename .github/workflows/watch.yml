@@ -1,10 +1,13 @@
 name: Mercari tracker
 
-# One run keeps checking Mercari for ~5.5 hours, then starts the next run itself,
-# so the tracker runs continuously instead of waiting for GitHub's (often hours-late) schedule.
+# Active only 08:00-24:00 Japan time. One run keeps checking Mercari for up to ~5.5 hours,
+# then starts the next run itself (GitHub's own schedule is often hours late).
+# The hourly schedule starts the chain each morning and restarts it if it ever stops;
+# outside active hours those runs exit within seconds.
 on:
   schedule:
     - cron: "17 * * * *"      # hourly backup: restarts the chain if it ever stops
+    - cron: "3,33 23 * * *"   # extra tries around 08:00 Japan time (23:00 UTC) to start the day
   workflow_dispatch:          # "Run workflow" button / used by the chain
 
 permissions:
@@ -26,16 +29,19 @@ jobs:
         with:
           node-version: 22
 
-      - name: Check Mercari (every ~3 minutes for 5.5 hours)
+      - name: Check Mercari (every ~3.5 minutes, 08:00-24:00 Japan time)
         run: node check.mjs
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RUN_MINUTES: 330
-          INTERVAL_SEC: 150
+          INTERVAL_SEC: 180
+          ACTIVE_HOURS_JST: "8-24"
 
-      - name: Start next run
+      - name: Start next run (only during active hours)
         if: ${{ !cancelled() }}
-        run: gh workflow run watch.yml --ref main --repo "$GITHUB_REPOSITORY"
+        run: |
+          h=$(TZ=Asia/Tokyo date +%-H)
+          if [ "$h" -ge 8 ]; then gh workflow run watch.yml --ref main --repo "$GITHUB_REPOSITORY"; else echo "Outside active hours (JST $h:00), not chaining."; fi
         env:
           GH_TOKEN: ${{ github.token }}

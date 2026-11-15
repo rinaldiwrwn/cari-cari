@@ -15,6 +15,12 @@ const NTFY_TOPIC = (process.env.NTFY_TOPIC || "").trim();
 const CHECKS = Number(process.env.CHECKS || 1);
 const INTERVAL_SEC = Number(process.env.INTERVAL_SEC || 180);
 const RUN_MINUTES = Number(process.env.RUN_MINUTES || 0); // >0: keep checking for this long (one long Actions run)
+const ACTIVE_HOURS = (process.env.ACTIVE_HOURS_JST || "").split("-").map(Number); // e.g. "8-24" (Japan time)
+const inActiveHours = () => {
+  if (ACTIVE_HOURS.length !== 2 || ACTIVE_HOURS.some(isNaN)) return true;
+  const h = (new Date().getUTCHours() + 9) % 24;
+  return h >= ACTIVE_HOURS[0] && h < ACTIVE_HOURS[1];
+};
 const MAX_NOTIFY = 12; // individual notifications per check; the rest are summarised in one
 
 const norm = (s) => (s || "").normalize("NFKC").toLowerCase().replace(/[\s\-_.・]/g, "");
@@ -259,9 +265,14 @@ try {
   process.exit(1);
 }
 for (const s of searches) console.log(`Pencarian: ${s.name} | ${s.page}`);
+if (!inActiveHours()) {
+  console.log(`Di luar jam aktif (${process.env.ACTIVE_HOURS_JST} waktu Jepang), tidak mengecek.`);
+  process.exit(0);
+}
 const started = Date.now();
 for (let i = 0; RUN_MINUTES > 0 ? true : i < CHECKS; i++) {
   if (i > 0) await sleep(INTERVAL_SEC * 1000);
   if (RUN_MINUTES > 0 && Date.now() - started > RUN_MINUTES * 60000) break;
+  if (!inActiveHours()) { console.log("Jam aktif selesai, berhenti sampai besok pagi."); break; }
   try { await checkOnce(searches); } catch (e) { console.log(`ERROR: ${e.message}`); }
 }
