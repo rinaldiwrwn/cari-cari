@@ -2,7 +2,7 @@
   "searches": [
     {
       "name": "Favre-Leuba",
-      "url": "https://jp.mercari.com/search?keyword=favre%20leuba&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=favre+leuba&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "favreleuba",
         "ファーブルルーバ"
@@ -44,7 +44,7 @@
     },
     {
       "name": "Favre-Leuba",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%95%E3%82%A1%E3%83%BC%E3%83%96%E3%83%AB%E3%83%AB%E3%83%BC%E3%83%90&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%95%E3%82%A1%E3%83%BC%E3%83%96%E3%83%AB%E3%83%AB%E3%83%BC%E3%83%90&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "favreleuba",
         "ファーブルルーバ"
@@ -86,7 +86,7 @@
     },
     {
       "name": "Omega",
-      "url": "https://jp.mercari.com/search?keyword=omega&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=omega&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "omega",
         "オメガ"
@@ -162,7 +162,7 @@
     },
     {
       "name": "Omega",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%AA%E3%83%A1%E3%82%AC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%AA%E3%83%A1%E3%82%AC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "omega",
         "オメガ"
@@ -238,7 +238,7 @@
     },
     {
       "name": "Longines",
-      "url": "https://jp.mercari.com/search?keyword=longines&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=longines&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "longines",
         "ロンジン"
@@ -280,7 +280,7 @@
     },
     {
       "name": "Longines",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%AD%E3%83%B3%E3%82%B8%E3%83%B3&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%AD%E3%83%B3%E3%82%B8%E3%83%B3&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "longines",
         "ロンジン"
@@ -322,7 +322,7 @@
     },
     {
       "name": "Certina",
-      "url": "https://jp.mercari.com/search?keyword=certina&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=certina&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "certina",
         "サーチナ"
@@ -364,7 +364,7 @@
     },
     {
       "name": "Certina",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%B5%E3%83%BC%E3%83%81%E3%83%8A&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%B5%E3%83%BC%E3%83%81%E3%83%8A&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "certina",
         "サーチナ"
@@ -406,7 +406,7 @@
     },
     {
       "name": "Yema",
-      "url": "https://jp.mercari.com/search?keyword=yema&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=yema&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "yema",
         "イエマ"
@@ -448,7 +448,7 @@
     },
     {
       "name": "Yema",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%A4%E3%82%A8%E3%83%9E%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%A4%E3%82%A8%E3%83%9E+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "yema",
         "イエマ"
@@ -490,7 +490,7 @@
     },
     {
       "name": "Eska",
-      "url": "https://jp.mercari.com/search?keyword=eska&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=eska&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "eska",
         "エスカ"
@@ -532,7 +532,7 @@
     },
     {
       "name": "Eska",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%82%B9%E3%82%AB%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%82%B9%E3%82%AB+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "eska",
         "エスカ"
@@ -574,7 +574,7 @@
     },
     {
       "name": "Milus",
-      "url": "https://jp.mercari.com/search?keyword=milus&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=milus&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "milus",
         "ミルス"
@@ -616,7 +616,7 @@
     },
     {
       "name": "Milus",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%9F%E3%83%AB%E3%82%B9%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%9F%E3%83%AB%E3%82%B9+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "milus",
         "ミルス"
@@ -658,7 +658,7 @@
     },
     {
       "name": "Wittnauer",
-      "url": "https://jp.mercari.com/search?keyword=wittnauer&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=wittnauer&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "wittnauer",
         "ウィットナー",
@@ -701,7 +701,7 @@
     },
     {
       "name": "Wittnauer",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%82%A3%E3%83%83%E3%83%88%E3%83%8A%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%A6%E3%82%A3%E3%83%83%E3%83%88%E3%83%8A%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "wittnauer",
         "ウィットナー",
@@ -744,7 +744,7 @@
     },
     {
       "name": "Roy King",
-      "url": "https://jp.mercari.com/search?keyword=roy%20king&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=roy+king&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "royking",
         "ロイキング"
@@ -786,7 +786,7 @@
     },
     {
       "name": "Roy King",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%AD%E3%82%A4%E3%82%AD%E3%83%B3%E3%82%B0&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%AD%E3%82%A4%E3%82%AD%E3%83%B3%E3%82%B0&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "royking",
         "ロイキング"
@@ -828,7 +828,7 @@
     },
     {
       "name": "Zenith",
-      "url": "https://jp.mercari.com/search?keyword=zenith&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=zenith&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "zenith",
         "ゼニス"
@@ -870,7 +870,7 @@
     },
     {
       "name": "Zenith",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%BC%E3%83%8B%E3%82%B9&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%BC%E3%83%8B%E3%82%B9&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "zenith",
         "ゼニス"
@@ -912,7 +912,7 @@
     },
     {
       "name": "Tissot",
-      "url": "https://jp.mercari.com/search?keyword=tissot&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=tissot&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "tissot",
         "ティソ"
@@ -954,7 +954,7 @@
     },
     {
       "name": "Tissot",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%86%E3%82%A3%E3%82%BD&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%86%E3%82%A3%E3%82%BD&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "tissot",
         "ティソ"
@@ -996,7 +996,7 @@
     },
     {
       "name": "LeCoultre",
-      "url": "https://jp.mercari.com/search?keyword=lecoultre&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=lecoultre&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "lecoultre",
         "ルクルト"
@@ -1038,7 +1038,7 @@
     },
     {
       "name": "LeCoultre",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%AB%E3%82%AF%E3%83%AB%E3%83%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%AB%E3%82%AF%E3%83%AB%E3%83%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "lecoultre",
         "ルクルト"
@@ -1080,7 +1080,7 @@
     },
     {
       "name": "Seiko Le Vent",
-      "url": "https://jp.mercari.com/search?keyword=le%20vent&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=le+vent&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "levent",
         "ルヴァン"
@@ -1122,7 +1122,7 @@
     },
     {
       "name": "Seiko Le Vent",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%AB%E3%83%B4%E3%82%A1%E3%83%B3&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%AB%E3%83%B4%E3%82%A1%E3%83%B3&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "levent",
         "ルヴァン"
@@ -1164,7 +1164,7 @@
     },
     {
       "name": "Bucherer",
-      "url": "https://jp.mercari.com/search?keyword=bucherer&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=bucherer&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "bucherer",
         "ブッフェラー",
@@ -1207,7 +1207,7 @@
     },
     {
       "name": "Bucherer",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%96%E3%83%83%E3%83%95%E3%82%A7%E3%83%A9%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%96%E3%83%83%E3%83%95%E3%82%A7%E3%83%A9%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "bucherer",
         "ブッフェラー",
@@ -1250,7 +1250,7 @@
     },
     {
       "name": "Zodiac",
-      "url": "https://jp.mercari.com/search?keyword=zodiac&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=zodiac&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "zodiac",
         "ゾディアック"
@@ -1292,7 +1292,7 @@
     },
     {
       "name": "Zodiac",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%BE%E3%83%87%E3%82%A3%E3%82%A2%E3%83%83%E3%82%AF%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%BE%E3%83%87%E3%82%A3%E3%82%A2%E3%83%83%E3%82%AF+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "zodiac",
         "ゾディアック"
@@ -1334,7 +1334,7 @@
     },
     {
       "name": "Movado",
-      "url": "https://jp.mercari.com/search?keyword=movado&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=movado&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "movado",
         "モバード",
@@ -1377,7 +1377,7 @@
     },
     {
       "name": "Movado",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%A2%E3%83%90%E3%83%BC%E3%83%89&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%A2%E3%83%90%E3%83%BC%E3%83%89&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "movado",
         "モバード",
@@ -1420,7 +1420,7 @@
     },
     {
       "name": "Enicar",
-      "url": "https://jp.mercari.com/search?keyword=enicar&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=enicar&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "enicar",
         "エニカ"
@@ -1462,7 +1462,7 @@
     },
     {
       "name": "Enicar",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%83%8B%E3%82%AB%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%83%8B%E3%82%AB+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "enicar",
         "エニカ"
@@ -1504,7 +1504,7 @@
     },
     {
       "name": "Vulcain",
-      "url": "https://jp.mercari.com/search?keyword=vulcain&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=vulcain&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "vulcain",
         "ヴァルカン",
@@ -1547,7 +1547,7 @@
     },
     {
       "name": "Vulcain",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%B4%E3%82%A1%E3%83%AB%E3%82%AB%E3%83%B3%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%B4%E3%82%A1%E3%83%AB%E3%82%AB%E3%83%B3+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "vulcain",
         "ヴァルカン",
@@ -1590,7 +1590,7 @@
     },
     {
       "name": "Bulova",
-      "url": "https://jp.mercari.com/search?keyword=bulova&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=bulova&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "bulova",
         "ブローバ"
@@ -1632,7 +1632,7 @@
     },
     {
       "name": "Bulova",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%96%E3%83%AD%E3%83%BC%E3%83%90&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%96%E3%83%AD%E3%83%BC%E3%83%90&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "bulova",
         "ブローバ"
@@ -1674,7 +1674,7 @@
     },
     {
       "name": "Rado",
-      "url": "https://jp.mercari.com/search?keyword=rado&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=rado&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "rado",
         "ラドー"
@@ -1716,7 +1716,7 @@
     },
     {
       "name": "Rado",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%A9%E3%83%89%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%A9%E3%83%89%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "rado",
         "ラドー"
@@ -1758,7 +1758,7 @@
     },
     {
       "name": "Eterna",
-      "url": "https://jp.mercari.com/search?keyword=eterna&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=eterna&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "eterna",
         "エテルナ"
@@ -1800,7 +1800,7 @@
     },
     {
       "name": "Eterna",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%83%86%E3%83%AB%E3%83%8A&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%A8%E3%83%86%E3%83%AB%E3%83%8A&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "eterna",
         "エテルナ"
@@ -1842,7 +1842,7 @@
     },
     {
       "name": "TAG Heuer",
-      "url": "https://jp.mercari.com/search?keyword=tag%20heuer&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=tag+heuer&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "tagheuer",
         "タグホイヤー"
@@ -1884,7 +1884,7 @@
     },
     {
       "name": "TAG Heuer",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%BF%E3%82%B0%E3%83%9B%E3%82%A4%E3%83%A4%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%BF%E3%82%B0%E3%83%9B%E3%82%A4%E3%83%A4%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "tagheuer",
         "タグホイヤー"
@@ -1926,7 +1926,7 @@
     },
     {
       "name": "Heuer",
-      "url": "https://jp.mercari.com/search?keyword=heuer&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=heuer&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "heuer",
         "ホイヤー"
@@ -1968,7 +1968,7 @@
     },
     {
       "name": "Heuer",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%9B%E3%82%A4%E3%83%A4%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%9B%E3%82%A4%E3%83%A4%E3%83%BC&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "heuer",
         "ホイヤー"
@@ -2010,7 +2010,7 @@
     },
     {
       "name": "Corum",
-      "url": "https://jp.mercari.com/search?keyword=corum&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=corum&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "corum",
         "コルム"
@@ -2052,7 +2052,7 @@
     },
     {
       "name": "Corum",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%B3%E3%83%AB%E3%83%A0%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%B3%E3%83%AB%E3%83%A0+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "corum",
         "コルム"
@@ -2094,7 +2094,7 @@
     },
     {
       "name": "Baume & Mercier",
-      "url": "https://jp.mercari.com/search?keyword=baume%20mercier&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=baume+mercier&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "baume",
         "ボーム"
@@ -2136,7 +2136,7 @@
     },
     {
       "name": "Baume & Mercier",
-      "url": "https://jp.mercari.com/search?keyword=%E3%83%9C%E3%83%BC%E3%83%A0%20%E3%83%A1%E3%83%AB%E3%82%B7%E3%82%A8&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%83%9C%E3%83%BC%E3%83%A0+%E3%83%A1%E3%83%AB%E3%82%B7%E3%82%A8&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "baume",
         "ボーム"
@@ -2177,8 +2177,94 @@
       ]
     },
     {
+      "name": "Juvenia",
+      "url": "https://jp.mercari.com/search?keyword=juvenia&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
+      "mustMatch": [
+        "juvenia",
+        "ジュベニア",
+        "ジュヴェニア"
+      ],
+      "exclude": [
+        "ネックレス",
+        "ペンダント",
+        "ブローチ",
+        "指輪",
+        "ピアス",
+        "イヤリング",
+        "カフス",
+        "タイピン",
+        "キーホルダー",
+        "キーリング",
+        "財布",
+        "サプリ",
+        "空箱",
+        "箱のみ",
+        "ケースのみ",
+        "冊子",
+        "カタログ",
+        "説明書のみ",
+        "保証書のみ",
+        "ギャランティのみ",
+        "文字盤のみ",
+        "ムーブメントのみ",
+        "工具",
+        "ポスター",
+        "ステッカー",
+        "ノベルティ",
+        "置時計",
+        "掛時計",
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
+      ]
+    },
+    {
+      "name": "Juvenia",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%A5%E3%83%99%E3%83%8B%E3%82%A2&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
+      "mustMatch": [
+        "juvenia",
+        "ジュベニア",
+        "ジュヴェニア"
+      ],
+      "exclude": [
+        "ネックレス",
+        "ペンダント",
+        "ブローチ",
+        "指輪",
+        "ピアス",
+        "イヤリング",
+        "カフス",
+        "タイピン",
+        "キーホルダー",
+        "キーリング",
+        "財布",
+        "サプリ",
+        "空箱",
+        "箱のみ",
+        "ケースのみ",
+        "冊子",
+        "カタログ",
+        "説明書のみ",
+        "保証書のみ",
+        "ギャランティのみ",
+        "文字盤のみ",
+        "ムーブメントのみ",
+        "工具",
+        "ポスター",
+        "ステッカー",
+        "ノベルティ",
+        "置時計",
+        "掛時計",
+        "懐中時計",
+        "ウォッチケース",
+        "収納ケース",
+        "コレクションケース"
+      ]
+    },
+    {
       "name": "Geneve",
-      "url": "https://jp.mercari.com/search?keyword=geneve&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=geneve&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "geneve",
         "genève",
@@ -2222,7 +2308,7 @@
     },
     {
       "name": "Geneve",
-      "url": "https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%A5%E3%83%8D%E3%83%BC%E3%83%96%20%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale",
+      "url": "https://jp.mercari.com/search?keyword=%E3%82%B8%E3%83%A5%E3%83%8D%E3%83%BC%E3%83%96+%E6%99%82%E8%A8%88&item_condition_id=2%2C3%2C4%2C5%2C6&status=on_sale&price_max=100000",
       "mustMatch": [
         "geneve",
         "genève",
